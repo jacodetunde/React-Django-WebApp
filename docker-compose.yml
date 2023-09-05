@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  react:
+    build: .
+    ports:
+      - 8001:8001
+    container_name: django
+    volumes:
+      - data:/opt
+    networks:
+      - djangonetworks
+
+networks:
+  djangonetworks:
+volumes:
+  data:
